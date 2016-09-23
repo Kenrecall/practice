@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.div1{
+			position: relative;
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+		.div2{
+			position: absolute;
+			left: 200px;
+			width: 100px;
+			height: 100px;
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<label for="input-radio-boy">
+		<input id="input-radio-boy" name="sex" type="radio">男
+	</label>
+	<label for="input-radio-girl">
+		<input id="input-radio-girl" name="sex" type="radio">女
+	</label>
+
+	<div class="div1">
+		<div class="div2"></div>
+	</div>
+
+	<script type="text/javascript" src="../../repository/jquery-1.12.1.min.js"></script>
+
+	<script>
+		$('label').click(function(){
+			// $(this)
+			alert(1);
+		})
+
+		$('inut').click(function(event){
+			// event.stopPropagation();
+			return false;
+		})
+
+		$('.div1').click(function(){
+			alert('div');
+		})
+
+		$('.div2').click(function(){
+			return false;
+		})
+	</script>
+</body>
+</html>
