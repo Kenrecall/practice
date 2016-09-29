@@ -1,6 +1,10 @@
 - 文档对象模型(DOM,Document Object Model)是针对XML，但经过扩展用于HTML的应用程序编程接口(API,Application Programming Interface)
 
-- 原理：DOM把整个页面映射为一个多层节点结构(见树形图)。HTML或XML页面中的每个组成部分都是某种类型节点(比如：元素节点、属性节点、文本节点).通过树形图，开发人员获得了控制页面内容和结构的主动权。通过DOM提供的API(比如：removeChild/appendChild/createElement),来删除、添加、创建节点
+- 原理：DOM把整个页面映射为一个多层节点结构
+
+![节点树](DOMTree.png "节点树图")
+
+HTML或XML页面中的每个组成部分都是某种类型节点(比如：元素节点、属性节点、文本节点).通过树形图，开发人员获得了控制页面内容和结构的主动权。通过DOM提供的API(比如：removeChild/appendChild/createElement),来删除、添加、创建节点
 
 - 注意：DOM不仅在javascript中得到实现，在其他很多语言中也被应用
 
@@ -24,7 +28,7 @@
 
     3. DOM3
         
-        - 引入了同一方式加载和保存文档的方式————在DOM加载和保存模块中定义
+        - 引入了统一方式加载和保存文档的方式————在DOM加载和保存模块中定义
 
         - 新增了验证文档的方法————在DOM验证模块中定义
 
