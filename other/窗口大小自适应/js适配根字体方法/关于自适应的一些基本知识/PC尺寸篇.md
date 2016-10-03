@@ -124,6 +124,41 @@ viewport的功能在于控制DOM中的根节点元素`<html>`.
 
 ![desktop_screenXY](pc/desktop_screenXY.jpg)
 
+###媒体查询
+- 兼容性: 
+    - IE不支持
+    - 如果`device-width/height`是以CSS像素进行度量的,那么Firefox将会使用`screen.width/height`的值
+    - 如果`width/height`是以设备像素进行度量的，那么Safari和Chrome将会使用`documentElement.clientWidth/Height`的值
+
+####例子
+```CSS
+div.sidebar {
+    width: 300px;
+}
+
+@media all and (max-width: 400px) {
+
+    // styles assigned when width is smaller than 400px;
+    div.sidebar {
+        width: 100px;
+    }
+
+}
+```
+在一般情况下,这里的侧边栏宽度是300px,而当宽度小于400像素的时候,那么侧边栏变成100px.那么小于400像素是谁小于400像素,即这里度量的是哪个宽度?
+
+这里有两个对应的媒体查询: `width/height`和`device-width/device-height`
+
+- `width/height`使用和`documentElement .clientWidth/Height`(换句话说就是viewport宽高)一样的值.它是工作在CSS像素下的
+
+- `device-width/device-height`使用和`screen.width/height`(换句话说就是屏幕的宽高)一样的值.它工作在设备像素下面
+
+![desktop_mediaqueries](pc/desktop_mediaqueries.jpg)
+
+在pc下,毫无疑问,我们使用`width`,我们只需要关注浏览器窗口大小就好了
+
+那么在移动端呢?
+
 
 ###参考
 - [screen.width/height](https://developer.mozilla.org/zh-CN/docs/Web/API/Screen/width)
