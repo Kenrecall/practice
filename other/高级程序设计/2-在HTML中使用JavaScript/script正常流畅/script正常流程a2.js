@@ -1,1 +1,0 @@
-alert('script正常流程2.js');
